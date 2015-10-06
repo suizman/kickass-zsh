@@ -1,8 +1,16 @@
 ---
 - name: Install base package
   pacman:
-    name: "{{ item }}"
+    name: "{{ zsh_base_pkg }}"
     state: present
     update_cache: yes
+
+- name: Install extra package
+  pacman:
+    name: "{{ item }}"
+    state: present
   with_items:
-    - zsh_base_pkg
+    - "{{ zsh_doc_pkg }}"
+    - "{{ zsh_completations_pkg }}"
+    - "{{ zsh_highlighting_pkg }}"
+  when: zsh_extra_pkg is defined

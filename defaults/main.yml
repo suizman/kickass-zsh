@@ -1,5 +1,9 @@
 ---
 ### Base packages
-xfce_base_pkg: zsh
+zsh_base_pkg: zsh
 
 ### Extra packages
+zsh_extra_pkg:
+zsh_doc_pkg: zsh-doc
+zsh_completations_pkg: zsh-completions
+zsh_highlighting_pkg: zsh-syntax-highlighting
