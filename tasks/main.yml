@@ -1,0 +1,6 @@
+---
+- name: Install Zsh
+  include: install_zsh.yml
+
+- name: Configure Zsh
+  include: configure_zsh.yml

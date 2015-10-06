@@ -1,0 +1,5 @@
+---
+### Base packages
+xfce_base_pkg: zsh
+
+### Extra packages

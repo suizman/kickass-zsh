@@ -1,0 +1,6 @@
+---
+- name: Install base package
+  pacman:
+    name: {{ item }}
+  with_items:
+    - zsh_base_pkg

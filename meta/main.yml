@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Martin Evgeniev
+  description: An Ansible role for installing kickass Xfce Desktop.
+  company: Blackcloudz.
+  license: TBC
+  min_ansible_version: 1.2
+  platforms:
+  - name: Arch Linux
+    versions:
+    - Rollin
+  categories:
+  - system
+  - tweaks
