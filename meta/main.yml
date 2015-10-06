@@ -8,7 +8,7 @@ galaxy_info:
   platforms:
   - name: Arch Linux
     versions:
-    - Rollin
+    - all
   categories:
   - system
   - tweaks
