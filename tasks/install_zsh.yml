@@ -2,5 +2,7 @@
 - name: Install base package
   pacman:
     name: {{ item }}
+    state: present
+    update_cache: yes 
   with_items:
     - zsh_base_pkg
