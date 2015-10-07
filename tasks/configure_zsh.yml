@@ -1,1 +1,6 @@
 ---
+- name: Copy Zsh config file
+  template:
+    src: ../templates/zshrc
+    dest: "{{ lookup('env','HOME') }}/.zshrc"
+    mode: 0644
