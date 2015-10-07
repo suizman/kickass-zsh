@@ -1,6 +1,11 @@
 ---
+### Archlinux
 - name: Install Zsh
-  include: install_zsh.yml
+  include: archlinux/install_zsh.yml
+
+### Common
+- name: Install Oh My Zsh
+  include: common/install_oh_my_zsh.yml
 
 - name: Configure Zsh
-  include: configure_zsh.yml
+  include: common/configure_oh_my_zsh.yml

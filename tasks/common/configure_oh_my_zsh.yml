@@ -1,0 +1,9 @@
+---
+- name: Copy Oh My Zsh config file
+  template:
+    src: ../../templates/common/zshrc
+    dest: "{{ lookup('env','HOME') }}/.zshrc"
+    mode: 0644
+  when: zsh_extra_pkg == true
+  tags:
+    - archlinux
