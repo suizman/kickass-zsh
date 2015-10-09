@@ -1,0 +1,4 @@
+[localhost]
+localhost ansible_python_interpreter=/usr/bin/python2
+[vagrant]
+192.168.87.7 ansible_python_interpreter=/usr/bin/python2
