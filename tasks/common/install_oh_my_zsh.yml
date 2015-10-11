@@ -1,4 +1,10 @@
 ---
+- name: Set default Shell
+  sudo: yes
+  user:
+    name: "{{ ansible_env.USER }}"
+    shell: /bin/zsh
+
 - name: Check for Oh My Zsh
   stat:
     path: "{{ lookup('env','ZSH') }}/tools/uninstall.sh"
