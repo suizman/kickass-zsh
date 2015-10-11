@@ -3,3 +3,7 @@
 - src: https://github.com/suizman/kickass-zsh.git
   path: roles
   scm: git
+
+- src: https://github.com/suizman/ansible-git.git
+  path: roles
+  scm: git

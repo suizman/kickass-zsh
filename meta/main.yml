@@ -1,12 +1,18 @@
 ---
 galaxy_info:
   author: Martin Evgeniev
-  description: An Ansible role for installing kickass Xfce Desktop.
+  description: An Ansible role for installing kickass Zsh.
   company: Blackcloudz.
   license: TBC
   min_ansible_version: 1.2
   platforms:
   - name: Arch Linux
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  - name: CentOS
     versions:
     - all
   categories:

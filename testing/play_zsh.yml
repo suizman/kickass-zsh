@@ -3,4 +3,5 @@
   connection: local
   gather_facts: true
   roles:
+    - { role: 'roles/ansible-git' }
     - { role: 'roles/kickass-zsh' }

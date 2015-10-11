@@ -1,0 +1,19 @@
+---
+- name: Install base package Debian/Ubuntu
+  sudo: yes
+  apt:
+    name: "{{ zsh_base_pkg }}"
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
+
+- name: Install extra package Debian/Ubuntu
+  sudo: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ zsh_doc_pkg }}"
+    - "{{ zsh_completations_pkg }}"
+    - "{{ zsh_highlighting_pkg }}"
+  when: zsh_extra_pkg == true and ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"

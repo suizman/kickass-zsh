@@ -1,0 +1,19 @@
+---
+- name: Install base package CentOS/Fedora/SuSe
+  sudo: yes
+  yum:
+    name: "{{ zsh_base_pkg }}"
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "CentOS" or ansible_os_family == "Fedora" or ansible_os_family == "SuSe"
+
+- name: Install extra package CentOS/Fedora/SuSe
+  sudo: yes
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ zsh_doc_pkg }}"
+    - "{{ zsh_completations_pkg }}"
+    - "{{ zsh_highlighting_pkg }}"
+  when: zsh_extra_pkg == true and ansible_os_family == "CentOS" or ansible_os_family == "Fedora" or ansible_os_family == "SuSe"

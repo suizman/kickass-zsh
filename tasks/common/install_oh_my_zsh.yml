@@ -4,12 +4,8 @@
     path: "{{ lookup('env','ZSH') }}/tools/uninstall.sh"
   register: oh_my_zsh_check
   when: zsh_extra_pkg == true
-  tags:
-    - archlinux
 
 - name: Install Oh My Zsh
   shell: >
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   when: oh_my_zsh_check.stat.exists == False and zsh_extra_pkg is defined
-  tags:
-    - archlinux
