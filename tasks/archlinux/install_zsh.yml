@@ -5,8 +5,7 @@
     name: "{{ zsh_base_pkg }}"
     state: present
     update_cache: yes
-  tags:
-    - archlinux
+  when: ansible_os_family == "Archlinux"
 
 - name: Install extra package Arch Linux
   sudo: yes
@@ -17,6 +16,4 @@
     - "{{ zsh_doc_pkg }}"
     - "{{ zsh_completations_pkg }}"
     - "{{ zsh_highlighting_pkg }}"
-  when: zsh_extra_pkg == true
-  tags:
-    - archlinux
+  when: zsh_extra_pkg == true and ansible_os_family == "Archlinux"
