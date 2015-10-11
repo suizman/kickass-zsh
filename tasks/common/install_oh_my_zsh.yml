@@ -13,5 +13,7 @@
 
 - name: Install Oh My Zsh
   shell: >
+    export SHELL=/bin/zsh && \
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   when: oh_my_zsh_check.stat.exists == False and zsh_extra_pkg is defined
+  register: install_oh_my_zsh_result
