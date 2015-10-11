@@ -7,7 +7,7 @@
 
 - name: Check for Oh My Zsh
   stat:
-    path: "{{ lookup('env','ZSH') }}/tools/uninstall.sh"
+    path: "{{ ansible_env.HOME }}/.oh-my-zsh/tools/uninstall.sh"
   register: oh_my_zsh_check
   when: zsh_extra_pkg == true
 
