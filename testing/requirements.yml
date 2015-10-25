@@ -1,5 +1,4 @@
 ---
 ### Install required roles..
 - src: https://github.com/suizman/ansible-git.git
-  path: roles
   scm: git
