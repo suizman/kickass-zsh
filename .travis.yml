@@ -14,8 +14,8 @@ install:
   - pip install ansible
 
 script:
-  # Install requirements
-  - ansible-galaxy install -r testing/requirements.yml --force
+  # Install required ansible roles
+  - ansible-galaxy install -r testing/requirements.yml -p testing/roles --force
 
   # Check the role/playbook's syntax.
   - ansible-playbook -i testing/inventory testing/play_zsh.yml --syntax-check
